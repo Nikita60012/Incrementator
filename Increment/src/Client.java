@@ -15,8 +15,12 @@ public class Client {
                     out.flush();
 
                     InputStream input = socket.getInputStream();
-                    count = input.read();
-                    System.out.println("response " + count);
+
+                    int counter = input.read();
+                    if(counter == 11){
+                        break;
+                    }
+                    System.out.println("response " + counter);
                 }
             }
     }

@@ -27,7 +27,8 @@ public class Server {
                 break;
             }
             System.out.println("Request: " + count);
-            out.write(count++);
+            count++;
+            out.write(count);
             out.flush();
         }
     }
